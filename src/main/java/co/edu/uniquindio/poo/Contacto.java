@@ -1,5 +1,9 @@
 package co.edu.uniquindio.poo;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
+
 public class Contacto {
     private String nombre;
     private String alias;
@@ -23,6 +27,7 @@ public class Contacto {
         this.telefono = telefono;
         this.email = email;
     }
+
 
     /**
      * Metodos Setters && Getters de la clase
@@ -67,6 +72,14 @@ public class Contacto {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+
+    
+    @Override
+    public String toString() {
+        return "Contacto [nombre=" + nombre + ", alias=" + alias + ", direccion=" + direccion + ", telefono=" + telefono
+                + ", email=" + email + "]";
     }
 
 }
