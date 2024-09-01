@@ -20,14 +20,18 @@ public class App {
         grupo.agregarContacto(ana);
         grupo.agregarContacto(carlos);
         grupo.agregarContacto(carlos2); //muestra de que un contacto repetido no existe en el mismo codigo
+        mensajeAviso();
         mostrarMensaje(grupo.toString());
-        grupo.eliminarContactos("555-9876");
+        grupo.eliminarContactos("555-9876");//muestra de como se ve un cuando un contacto es eliminado (ana)
+        mensajeAviso();
         mostrarMensaje(grupo.toString());
         Reunion reunion = creacionDeReunion();
-        reunion.agregarAsistente(carlos);
+        reunion.agregarAsistente(ana);//agregacion de contacto a reunion manual
         reunion.agregarGrupoAsistente(grupo.getGrupo());
+        mensajeAviso();
         mostrarMensaje(reunion.toString());
-        reunion.eliminarAsistente(carlos);
+        reunion.eliminarAsistente(carlos);//eliminacion de asistente de mandera manual
+        mensajeAviso();
         mostrarMensaje(reunion.toString());
 
     }
@@ -72,6 +76,10 @@ public class App {
         Reunion reunion = new Reunion("Proxima fiesta del pitas", "12 de diciembre 2004", "8:00AM");
         return reunion;
     }
+    public static void mensajeAviso() {
+        System.out.println("Se analiza la proxima prueba de la siguiente manera : \n" + "\n");
+    }
+
     /**
      * metodo para mostrar cualquier mensaje
      * @param mensaje
