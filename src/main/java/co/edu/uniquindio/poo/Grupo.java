@@ -7,8 +7,10 @@ public class Grupo {
     private String nombre;
     private Categoria categoria;
     public Collection<Contacto> grupo;
+
     /**
      * Metodo constructor de la clase Grupo
+     * 
      * @param nombre
      * @param categoria
      */
@@ -18,8 +20,10 @@ public class Grupo {
         grupo = new ArrayList<>();
 
     }
+
     /**
      * Metodos setters && getters de la clase
+     * 
      * @return
      */
     public String getNombre() {
@@ -45,8 +49,10 @@ public class Grupo {
     public void setContactos(Collection<Contacto> grupo) {
         this.grupo = grupo;
     }
+
     /**
      * Metodo para verificar que ningun contacto creado se duplique dentro de grupo
+     * 
      * @param nombre
      * @param telefono
      * @return
@@ -62,22 +68,27 @@ public class Grupo {
         }
         return centinela;
     }
+
     /**
-     * Metodos para agragar contactos a un grupo con restruccion de 5 en la coleccion
+     * Metodos para agragar contactos a un grupo con restruccion de 5 en la
+     * coleccion
+     * 
      * @param contacto
      * @return
      */
     public String agregarContacto(Contacto contacto) {
-        String mensaje="El grupo al que intenta añadir el contacto tiene capacidad maxima alcanzada o el contacto que intenta añadir esta duplicado";
+        String mensaje = "El grupo al que intenta añadir el contacto tiene capacidad maxima alcanzada o el contacto que intenta añadir esta duplicado";
         if (grupo.size() <= 5) {
-            if (verificarContactos(contacto.getNombre(),contacto.getTelefono()) == true) {
+            if (verificarContactos(contacto.getNombre(), contacto.getTelefono()) == true) {
                 grupo.add(contacto);
             }
         }
         return mensaje;
     }
+
     /**
      * Metodo para eliminar contactos del grupo por medio del numero telefonico
+     * 
      * @param telefono
      * @return
      */
@@ -93,6 +104,7 @@ public class Grupo {
         }
         return mensaje;
     }
+
     /**
      * Metodo toString para modelado de codigo
      */

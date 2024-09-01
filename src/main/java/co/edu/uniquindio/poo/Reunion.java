@@ -74,8 +74,10 @@ public class Reunion {
         }
         return mensaje;
     }
+
     /**
-     * Metodo para agregar contactos de forma manual 
+     * Metodo para agregar contactos de forma manual
+     * 
      * @param contacto
      * @return
      */
@@ -88,13 +90,16 @@ public class Reunion {
         return mensaje;
 
     }
+
     /**
      * Metodo para agregar a la reunion grupos de contactos
+     * 
      * @param grupo
      */
     public void agregarGrupoAsistente(Collection<Contacto> grupo) {
         contactosAsistentes.addAll(grupo);
     }
+
     /**
      * metodo toString para modelado de codigo
      */

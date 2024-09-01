@@ -1,6 +1,5 @@
 package co.edu.uniquindio.poo;
 
-
 public class Contacto {
     private String nombre;
     private String alias;
@@ -24,7 +23,6 @@ public class Contacto {
         this.telefono = telefono;
         this.email = email;
     }
-
 
     /**
      * Metodos Setters && Getters de la clase
@@ -70,7 +68,6 @@ public class Contacto {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
 
     /**
      * metodo toString para mejor modelado de codigo
