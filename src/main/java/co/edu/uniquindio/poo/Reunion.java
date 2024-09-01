@@ -7,11 +7,11 @@ import java.util.Collection;
 
 public class Reunion {
     private String descripcion;
-    private Date fecha;
-    private Time hora;
+    private String fecha;
+    private String hora;
     private Collection<Contacto> contactosAsistentes;
 
-    public Reunion(String descripcion, Date fecha, Time hora) {
+    public Reunion(String descripcion, String fecha, String hora) {
         this.descripcion = descripcion;
         this.fecha = fecha;
         this.hora = hora;
@@ -22,11 +22,11 @@ public class Reunion {
         return descripcion;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public Time getHora() {
+    public String getHora() {
         return hora;
     }
 
@@ -34,11 +34,11 @@ public class Reunion {
         this.descripcion = descripcion;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
-    public void setHora(Time hora) {
+    public void setHora(String hora) {
         this.hora = hora;
     }
 
