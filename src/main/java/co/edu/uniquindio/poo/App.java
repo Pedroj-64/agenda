@@ -84,9 +84,11 @@ public class App {
         Reunion reunion = new Reunion("Proxima fiesta del pitas", "12 de diciembre 2004", "8:00AM");
         return reunion;
     }
-
+    /**
+     * mensaje para hacer mostrar pruebas al imprimirm de mejor forma
+     */
     public static void mensajeAviso() {
-        System.out.println("Se analiza la proxima prueba de la siguiente manera : \n" + "\n");
+        System.out.println("Se analiza la proxima prueba de la siguiente manera : \n" );
     }
 
     /**

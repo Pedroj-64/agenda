@@ -1,11 +1,11 @@
 # agenta
 
-Descripciín basisca de su Proyecto de POO ...
+Proyecto agenda movil 
 
 # Autores
 
-- Autor 1
-- Autor 2
+- Esteban gacha Tangarife
+- Pedro Jose Soto Rivera
 
 # Herramientas
 
