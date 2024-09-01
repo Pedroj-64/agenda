@@ -1,8 +1,5 @@
 package co.edu.uniquindio.poo;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 
 public class Contacto {
     private String nombre;

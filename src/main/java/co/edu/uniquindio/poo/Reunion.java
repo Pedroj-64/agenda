@@ -2,10 +2,8 @@ package co.edu.uniquindio.poo;
 
 import java.sql.Date;
 import java.sql.Time;
-import java.text.CollationElementIterator;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 public class Reunion {
     private String descripcion;
