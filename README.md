@@ -1,6 +1,7 @@
-# agenta
+# agenda
 
-Proyecto agenda movil 
+Proyecto agenda movil (JAVA)
+Licencia=GNU GPL 3.0
 
 # Autores
 
