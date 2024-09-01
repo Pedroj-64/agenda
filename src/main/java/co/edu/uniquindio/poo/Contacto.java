@@ -72,7 +72,9 @@ public class Contacto {
     }
 
 
-    
+    /**
+     * metodo toString para mejor modelado de codigo
+     */
     @Override
     public String toString() {
         return "Contacto [nombre=" + nombre + ", alias=" + alias + ", direccion=" + direccion + ", telefono=" + telefono

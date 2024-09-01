@@ -1,46 +1,83 @@
 package co.edu.uniquindio.poo;
 
+
 /**
  * Hello world!
  *
  */
 public class App {
+    /**
+     * Metodo main para ejeccion de codigo
+     * @param args
+     */
     public static void main(String[] args) {
-       Contacto ramiro=creacionDeContactos();
-       Contacto romero=creacionDeContactos();
-       Grupo grupo=creacionDeGrupo();
-       Reunion reunion= creacionDeReunion();
-       grupo.agregarContacto(ramiro);
-       grupo.agregarContacto(romero);
-       reunion.agregarGrupoAsistente(grupo.getGrupo());
-       mostrarMensaje(reunion);
+        Contacto esteban = creacionDeContactos();
+        Contacto ana = creacionDeContacto2();
+        Contacto carlos = creacionDeContacto3();
+        Contacto carlos2 = creacionDeContacto4();
+        Grupo grupo = creacionDeGrupo();
+        grupo.agregarContacto(esteban);
+        grupo.agregarContacto(ana);
+        grupo.agregarContacto(carlos);
+        grupo.agregarContacto(carlos2); //muestra de que un contacto repetido no existe en el mismo codigo
+        mostrarMensaje(grupo.toString());
+        grupo.eliminarContactos("555-9876");
+        mostrarMensaje(grupo.toString());
+        Reunion reunion = creacionDeReunion();
+        reunion.agregarAsistente(carlos);
+        reunion.agregarGrupoAsistente(grupo.getGrupo());
+        mostrarMensaje(reunion.toString());
+        reunion.eliminarAsistente(carlos);
+        mostrarMensaje(reunion.toString());
+
+    }
+    /**
+     * Se crean tres contactos para la prueba del codigo
+     * @return
+     */
+    public static Contacto creacionDeContactos() {
+        Contacto esteban = new Contacto("Esteban", "El esteby", "calle 27 #34-89", "488544", "esteban@temu.com");
+        return esteban;
 
     }
 
-
-    public static Contacto creacionDeContactos(){
-        Contacto ramiro=new Contacto("Ramiro", "El jujis", "Calle ptm 27 #39-67", "44506", "jujalag@gmail.com");
-        return ramiro;
-
-    }
-    public static Contacto creacionDeContactos2(){
-        Contacto romero=new Contacto("Romero", "El jujis", "Calle ptm 27 #39-67", "44506", "jujalag@gmail.com");
-        return romero;
-
+    public static Contacto creacionDeContacto2(){
+        Contacto ana = new Contacto("Ana García", "AnaG", "Calle Principal 123", "555-9876", "ana@example.com");
+        return ana;
     }
 
-    public static Grupo creacionDeGrupo(){
-        Grupo grupo=new Grupo("Los ofinistas bareteros", Categoria.FIESTA);
+    public static Contacto creacionDeContacto3(){
+        Contacto carlos = new Contacto("Carlos Martínez", "CMar", "Avenida Central 456", "555-5432", "carlos@example.com");
+        return carlos;
+    }
+    public static Contacto creacionDeContacto4(){
+        Contacto carlos = new Contacto("Carlos Martínez", "CMar", "Avenida Central 456", "555-5432", "carlos@example.com");
+        return carlos;
+    }
+    
+    /**
+     * Creacion de grupo para almacenar contactos segun se de
+     * @return
+     */
+    public static Grupo creacionDeGrupo() {
+
+        Grupo grupo = new Grupo("Los ofinistas Crazis", Categoria.FIESTA);
         return grupo;
     }
-
-    public static Reunion creacionDeReunion(){
-        Reunion reunion=new Reunion("Proxima fiesta del pitas", "12 de diciembre 2004", "8:00AM");
+    /**
+     * Creacion de reunion 
+     * @return
+     */
+    public static Reunion creacionDeReunion() {
+        Reunion reunion = new Reunion("Proxima fiesta del pitas", "12 de diciembre 2004", "8:00AM");
         return reunion;
     }
-
-    public static void mostrarMensaje(Reunion reunion){
-       System.out.println(reunion);
+    /**
+     * metodo para mostrar cualquier mensaje
+     * @param mensaje
+     */
+    public static void mostrarMensaje(String mensaje) {
+        System.out.println(mensaje);
     }
 
 }
